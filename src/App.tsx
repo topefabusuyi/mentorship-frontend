@@ -1,15 +1,17 @@
-
+import { Route,Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
+import Login from './auth/login'
+
 
 function App() {
   
 
   return (
-    <>
-      <div className="bg-black text-white h-screen flex items-center justify-center">
-        welcome to my app frontend
-       </div>
-    </>
+    <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
+    </Routes>
   )
 }
 
